@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://solomonomoigui.great-site.net/sitemap.xml
