@@ -550,6 +550,15 @@ a {
   color: var(--primary-color);
 }
 
+.project-item.is-collapsed {
+  display: none;
+}
+
+.projects-toggle-wrap {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .education-card .card-body {
   display: flex;
   flex-direction: column;
