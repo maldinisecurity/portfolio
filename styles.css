@@ -482,10 +482,33 @@ a {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
+  align-items: stretch;
 }
 
 .education-card {
+  position: relative;
+  overflow: hidden;
   padding: 1.25rem;
+  min-height: 330px;
+  box-shadow: 0 12px 28px rgba(18, 24, 32, 0.05);
+}
+
+.education-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--blue);
+  opacity: 0.18;
+}
+
+.education-card-featured {
+  border-color: #9cb8d7;
+  background: linear-gradient(180deg, #ffffff 0%, #f3f8fc 100%);
+}
+
+.education-card-featured::before {
+  opacity: 1;
 }
 
 .education-header {
@@ -505,6 +528,24 @@ a {
 .education-header strong {
   color: var(--blue);
   font-size: 0.92rem;
+}
+
+.education-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.6rem;
+  background: #e7edf3;
+  border-radius: 999px;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.education-card-featured .education-status {
+  background: var(--navy);
+  color: #ffffff;
 }
 
 .education-card ul {
