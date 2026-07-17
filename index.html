@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Solomon Omoigui portfolio featuring cybersecurity skills, university progression, and selected development projects."
+      content="Cyber Security graduate portfolio featuring technical skills, hands-on security projects, and deployed development work."
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="http://solomonomoigui.great-site.net/" />
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Solomon Omoigui | Portfolio" />
     <meta
       property="og:description"
-      content="Cyber Security student portfolio featuring technical skills, university progression, and selected development projects."
+      content="Cyber Security graduate portfolio featuring technical skills, hands-on security projects, and deployed development work."
     />
     <meta property="og:url" content="http://solomonomoigui.great-site.net/" />
     <meta property="og:image" content="http://solomonomoigui.great-site.net/assets/solomon-portrait.png" />
@@ -24,7 +24,7 @@
     <meta name="twitter:title" content="Solomon Omoigui | Portfolio" />
     <meta
       name="twitter:description"
-      content="Cyber Security student portfolio featuring technical skills, university progression, and selected development projects."
+      content="Cyber Security graduate portfolio featuring technical skills, hands-on security projects, and deployed development work."
     />
     <meta name="twitter:image" content="http://solomonomoigui.great-site.net/assets/solomon-portrait.png" />
     <title>Solomon Omoigui | Portfolio</title>
@@ -69,7 +69,7 @@
             <p class="eyebrow">Cyber Security Portfolio</p>
             <h1>Solomon Omoigui</h1>
             <p class="hero-lead">
-              Cyber Security student focused on digital forensics, ethical hacking, risk assessment, and secure web development.
+              Cyber Security graduate (First Class BSc Hons) focused on digital forensics, ethical hacking, risk assessment, and secure web development.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#projects"><i class="bi bi-briefcase-fill"></i> View projects</a>
@@ -137,11 +137,16 @@
               <h3>SecureShift Staff Management</h3>
               <p>
                 SecureShift is a deployed staff management web app for organising teams, assigning shifts, and tracking
-                attendance through a responsive public interface and authenticated login flow.
+                attendance. Built with Node.js, Express, and PostgreSQL, it features secure role-based authentication,
+                JWT session controls, and granular permission management aligned to OWASP and NIST guidance - replacing
+                manual scheduling and attendance workflows with a centralised digital system used daily in a live
+                environment.
               </p>
               <div class="project-tags" aria-label="SecureShift project highlights">
                 <span>Shift scheduling</span>
                 <span>Attendance tracking</span>
+                <span>Role-based auth (JWT)</span>
+                <span>REST API</span>
                 <span>PWA-ready</span>
               </div>
               <a href="https://maldinisecurity.uk" target="_blank" rel="noreferrer" class="project-link">Open SecureShift</a>
@@ -170,6 +175,51 @@
               </figure>
             </div>
           </article>
+
+          <div class="security-projects" aria-label="Security assessment projects">
+            <article class="security-project-card">
+              <span class="project-type">Security Assessment</span>
+              <h3>Mobile Application Security Assessment</h3>
+              <p>
+                Structured penetration test of a mobile application covering authentication flows, session management,
+                API endpoints, and input validation. Produced a full vulnerability report with remediation
+                recommendations, then retested to verify fixes.
+              </p>
+              <p class="project-tools">OWASP ZAP · Postman · Browser DevTools</p>
+            </article>
+
+            <article class="security-project-card">
+              <span class="project-type">Vulnerability Assessment</span>
+              <h3>Controlled Lab Vulnerability Scan</h3>
+              <p>
+                Systematic vulnerability scan of a lab environment, classifying critical, high, and medium-severity
+                findings across exposed services and insecure configurations. Mapped results to CVE records and
+                produced a prioritised remediation plan.
+              </p>
+              <p class="project-tools">Nessus · CVE Analysis</p>
+            </article>
+
+            <article class="security-project-card">
+              <span class="project-type">Risk & Threat Modelling</span>
+              <h3>Smart Home Security &amp; Continuity Analysis</h3>
+              <p>
+                Cyber risk assessment of an IoT/smart home architecture using STRIDE and DREAD threat modelling.
+                Designed incident response procedures and a business continuity plan with defined recovery time and
+                recovery point objectives.
+              </p>
+              <p class="project-tools">Cisco Packet Tracer · STRIDE · DREAD</p>
+            </article>
+
+            <article class="security-project-card">
+              <span class="project-type">Web App Development</span>
+              <h3>Security Recruitment Web Application</h3>
+              <p>
+                Full-stack recruitment platform with applicant registration, authentication, and profile management.
+                Implemented password hashing, prepared statements, and CSRF protection throughout.
+              </p>
+              <p class="project-tools">PHP · MySQL · Bootstrap</p>
+            </article>
+          </div>
 
           <div class="project-list" id="projects-grid">
             <article class="project-row" data-featured-project>
@@ -289,9 +339,17 @@
             <p class="eyebrow">Contact</p>
             <h2>Open to cybersecurity and web development opportunities.</h2>
           </div>
-          <a class="btn btn-primary" href="https://www.linkedin.com/in/solomon-o-649461155" target="_blank" rel="noreferrer">
-            <i class="bi bi-linkedin"></i> LinkedIn Profile
-          </a>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:solomonomoigui@gmail.com">
+              <i class="bi bi-envelope-fill"></i> Email me
+            </a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/solomon-o-649461155" target="_blank" rel="noreferrer">
+              <i class="bi bi-linkedin"></i> LinkedIn Profile
+            </a>
+            <a class="btn btn-secondary" href="cv.html" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-file-earmark-person-fill"></i> Download CV
+            </a>
+          </div>
         </div>
       </section>
     </main>

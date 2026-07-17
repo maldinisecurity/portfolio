@@ -171,6 +171,7 @@ a {
 
 .hero-copy {
   max-width: 690px;
+  min-width: 0;
 }
 
 .eyebrow {
@@ -255,6 +256,7 @@ a {
 .section-heading {
   max-width: 740px;
   margin-bottom: 2rem;
+  min-width: 0;
 }
 
 .section-heading.centered {
@@ -291,6 +293,7 @@ a {
 .info-card {
   min-height: 250px;
   padding: 1.35rem;
+  min-width: 0;
 }
 
 .card-icon {
@@ -378,6 +381,7 @@ a {
   color: var(--blue);
   font-size: 0.82rem;
   font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .project-screenshots {
@@ -476,6 +480,40 @@ a {
 .projects-toggle-wrap {
   margin-top: 1.4rem;
   text-align: center;
+}
+
+.security-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 0 0 1.4rem;
+}
+
+.security-project-card {
+  min-width: 0;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.security-project-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.18rem;
+  line-height: 1.25;
+}
+
+.security-project-card p {
+  margin: 0.8rem 0 0;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.security-project-card .project-tools {
+  color: var(--blue);
+  font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .education-grid {
@@ -591,6 +629,13 @@ a {
   line-height: 1.08;
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -614,7 +659,8 @@ a {
   }
 
   .skills-grid,
-  .education-grid {
+  .education-grid,
+  .security-projects {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -676,6 +722,7 @@ a {
 
   .hero-lead {
     font-size: 1.05rem;
+    overflow-wrap: anywhere;
   }
 
   .hero-actions,
@@ -700,7 +747,8 @@ a {
   }
 
   .skills-grid,
-  .education-grid {
+  .education-grid,
+  .security-projects {
     grid-template-columns: 1fr;
   }
 
@@ -717,7 +765,29 @@ a {
     overflow-wrap: anywhere;
   }
 
+  .project-showcase-copy p,
+  .security-project-card p,
+  .info-card p,
+  .section-heading p:not(.eyebrow) {
+    overflow-wrap: anywhere;
+  }
+
+  .project-tags {
+    gap: 0.4rem;
+  }
+
+  .project-tags span {
+    min-height: 30px;
+    padding: 0.35rem 0.55rem;
+    font-size: 0.72rem;
+  }
+
   .project-link {
+    width: 100%;
+  }
+
+  .contact-actions,
+  .contact-actions .btn {
     width: 100%;
   }
 }
