@@ -329,9 +329,9 @@ a {
 
 .project-showcase {
   display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.45fr);
+  grid-template-columns: minmax(280px, 1fr) minmax(320px, 0.82fr);
   gap: 1.25rem;
-  align-items: stretch;
+  align-items: center;
   margin-bottom: 1.4rem;
   padding: 1.25rem;
   background: var(--surface);
@@ -382,8 +382,10 @@ a {
 
 .project-screenshots {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(180px, 0.65fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 0.8rem;
+  justify-self: end;
+  width: min(100%, 520px);
   min-width: 0;
 }
 
@@ -398,7 +400,7 @@ a {
 }
 
 .screenshot-frame-large {
-  min-height: 360px;
+  aspect-ratio: 16 / 10;
 }
 
 .screenshot-frame img {
@@ -410,6 +412,12 @@ a {
 
 .screenshot-frame:not(.screenshot-frame-large) img {
   object-position: center;
+}
+
+.screenshot-frame:not(.screenshot-frame-large) {
+  justify-self: end;
+  width: min(100%, 320px);
+  aspect-ratio: 16 / 9;
 }
 
 .screenshot-frame figcaption {
@@ -574,13 +582,14 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .screenshot-frame-large {
-    min-height: auto;
-    aspect-ratio: 16 / 10;
+  .project-screenshots {
+    justify-self: stretch;
+    width: 100%;
   }
 
   .screenshot-frame:not(.screenshot-frame-large) {
-    aspect-ratio: 16 / 9;
+    justify-self: stretch;
+    width: 100%;
   }
 }
 
