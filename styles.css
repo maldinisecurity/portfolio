@@ -224,9 +224,9 @@ a {
 .profile-photo {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: center 36%;
+  object-position: center;
 }
 
 .profile-details {
